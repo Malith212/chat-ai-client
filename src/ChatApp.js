@@ -21,9 +21,11 @@ function ChatApp() {
     };
 
     return (
-        <div className="chat-app">
-            <ChatBox messages={messages} />
-            <ChatInput onSendMessage={sendMessage} />
+        <div className="flex justify-center items-center h-screen bg-gray-100">
+            <div className="w-full max-w-lg p-4 bg-white shadow-lg rounded-lg">
+                <ChatBox messages={messages} />
+                <ChatInput onSendMessage={sendMessage} />
+            </div>
         </div>
     );
 }

@@ -1,11 +1,13 @@
 import React from 'react';
-import './ChatBox.css';
 
 function ChatBox({ messages }) {
     return (
-        <div className="chat-box">
+        <div className="chat-box h-80 overflow-y-auto mb-4 p-4 border border-gray-300 rounded">
             {messages.map((msg, index) => (
-                <div key={index} className={`message ${msg.sender === "You" ? "user-message" : "bot-message"}`}>
+                <div
+                    key={index}
+                    className={`p-2 mb-2 rounded-lg ${msg.sender === "You" ? "bg-blue-500 text-white self-end" : "bg-gray-200 text-gray-900"}`}
+                >
                     <strong>{msg.sender}:</strong> {msg.text}
                 </div>
             ))}
